@@ -1,15 +1,10 @@
 /* eslint-disable strict */
 'use strict';
 
-const fs = require('fs');
-const util = require('util');
 
-let promiseReadFile = util.promisfy(fs.readFile);
+let file = `${__dirname}/text.txt`;
+// let file = `${__dirname}/data/person.json`;
 
-promiseReadFile()
-  .then(() => {
-
-  })
-  .catch(() => {
-
-  });
+// let args = process.argv;
+// let file = process.argv.slice(2).shift();
+process.argv[2] = file;
