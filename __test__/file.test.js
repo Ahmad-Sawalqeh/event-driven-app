@@ -1,7 +1,7 @@
 'use strict ';
 
 jest.mock('fs');
-const { log } = require('../logger.js');
+const log = require('../logger.js');
 const alterFile = require('../file.js');
 
 describe('file module ', () => {
@@ -27,7 +27,9 @@ describe('file module ', () => {
 
 describe('logger', () => {
 
-  let consoleSpy, events, payload;
+  let consoleSpy;
+  let events = '';
+  let payload = '';
 
   beforeEach(() => {
     consoleSpy = jest.spyOn(console, 'log').mockImplementation();
@@ -38,8 +40,8 @@ describe('logger', () => {
   });
 
   it('spying on output of console.log() method', () => {
-    // log(events , payload);
-    // expect(consoleSpy).toHaveBeenCalled();
+    log(events , payload);
+    expect(consoleSpy).toHaveBeenCalled();
   });
 
 });

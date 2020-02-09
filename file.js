@@ -15,10 +15,11 @@ let file = `${__dirname}/text.txt`;
 
 const alterFile = (file) => {
 
-  readFile(file)
+  readFile(file, 'utf8')
     .then(data => {
       events.emit('read', 'The file has been read' );
-      let text = Buffer.from(data.toString().toUpperCase());
+      // let text = Buffer.from(data.toString().toUpperCase());
+      let text = data.toUpperCase();
       write(text);
     })
     .catch(() => {

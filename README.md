@@ -6,8 +6,8 @@
 
 ### Links and Resources
 
-- [submission PR]()
-- [ci/cd]() (GitHub Actions)
+- [submission PR](https://github.com/Ahmad-Sawalqeh/event-driven-app/pull/1)
+- [ci/cd](https://github.com/Ahmad-Sawalqeh/event-driven-app/runs/435028659?check_suite_focus=true) (GitHub Actions)
 
 ### Setup
 run `npm i`
